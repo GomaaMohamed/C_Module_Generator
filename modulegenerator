@@ -1,0 +1,178 @@
+#!/bin/bash
+#This Script generates C Modules
+read -p "Please enter the name of the Module Auther: " authername
+echo "
+Hello Mr: ${authername} 
+Wellcome to the C Programming Language Module Generator
+"
+read -p "Please enter the name of the Module: " modulename
+read -p "Please enter the Version of the Module: " versionnumber
+
+
+
+echo "#ifndef ${modulename}_INTERFACE_H
+#define ${modulename}_INTERFACE_H
+ 
+/************************************************************************
+* @file ${modulename}_interface.h
+* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
+* @version V${versionnumber}   
+* @date `date -R`
+* @brief A description of the module’s purpose.
+*************************************************************************/
+
+/* ==================================================================== */
+/* ======================= public data types ========================== */
+/* ==================================================================== */
+
+/* Definition of public datatypes go here */
+
+
+
+
+/* ==================================================================== */
+/* ======================== public Macros ============================= */
+/* ==================================================================== */
+
+/* Public Macro Definitions go here */
+
+
+
+
+/* ==================================================================== */
+/* ==================== public function prototypes ==================== */
+/* ==================================================================== */
+
+/* Public Functions Prototypes go here */
+
+
+
+
+#endif
+" 1> ${modulename}_interface.h
+
+
+echo "#ifndef ${modulename}_CONFIG_H
+#define ${modulename}_CONFIG_H
+ 
+/************************************************************************
+* @file ${modulename}_config.h
+* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
+* @version V${versionnumber}   
+* @date `date -R`
+* @brief A description of the module’s purpose.
+*************************************************************************/
+
+/* ==================================================================== */
+/* =================== Configurations Selection ======================= */
+/* ==================================================================== */
+
+/* Configurations Selection go here */
+
+
+
+
+#endif
+" 1> ${modulename}_config.h
+
+
+echo "#ifndef ${modulename}_PRIVATE_H
+#define ${modulename}_PRIVATE_H
+ 
+/************************************************************************
+* @file ${modulename}_private.h
+* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
+* @version V${versionnumber}   
+* @date `date -R`
+* @brief A description of the module’s purpose.
+*************************************************************************/
+
+/* ==================================================================== */
+/* ====================== private data types ========================== */
+/* ==================================================================== */
+
+/* Definition of private datatypes go here */
+
+
+
+
+/* ==================================================================== */
+/* ======================== private constants ========================= */
+/* ==================================================================== */
+
+/* #define, constants and enums statements go here */
+
+
+
+
+/* ==================================================================== */
+/* ==================== private function prototypes =================== */
+/* ==================================================================== */
+
+/* Private Functions Prototypes go here */
+
+
+
+
+#endif
+" 1> ${modulename}_private.h
+
+
+
+
+
+echo "/************************************************************************
+* @file ${modulename}_program.c
+* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
+* @version V${versionnumber}   
+* @date `date -R`
+* @brief A description of the module’s purpose.
+*************************************************************************/
+
+/* ==================================================================== */
+/* ========================== include files =========================== */
+/* ==================================================================== */
+
+/* Inclusion of Standard Types and Bit Math header files goes here */
+
+/* Inclusion of Module header files goes here */
+#include \"${modulename}_interface.h\"
+#include \"${modulename}_private.h\"
+#include \"${modulename}_config.h\"
+
+/* Inclusion of interface header files of the Other Modules goes here */
+
+
+
+
+/* ==================================================================== */
+/* ======================== global variables ========================== */
+/* ==================================================================== */
+
+/* Global variables definitions go here */
+
+
+
+
+/* ==================================================================== */
+/* =================== Public functions definition ==================== */
+/* ==================================================================== */
+
+/* Functions definitions public functions go here */
+
+
+
+
+/* ==================================================================== */
+/* =============== private functions definition ======================= */
+/* ==================================================================== */
+
+/* Function Definitions for private (static) functions go here */
+
+
+
+
+
+" 1> ${modulename}_program.c
+clear
+echo "${modulename} module was successfully created...."
