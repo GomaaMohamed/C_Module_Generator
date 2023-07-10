@@ -1,4 +1,4 @@
-# C_Module_Generator:
+# C_Module_Generator
 This is a bash script used to generate a well structured C Software Component 
 
 
