@@ -40,10 +40,10 @@ echo "#ifndef ${modulename}_INTERFACE_H
 
 
 /* ==================================================================== */
-/* ==================== public function prototypes ==================== */
+/* ==================== public function Declaration =================== */
 /* ==================================================================== */
 
-/* Public Functions Prototypes go here */
+/* Public Functions Declaration go here */
 
 
 
@@ -97,16 +97,16 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 /* ==================================================================== */
-/* ======================== private constants ========================= */
+/* ======================== private variables ========================= */
 /* ==================================================================== */
 
-/* #define, constants and enums statements go here */
+/* private variables and Macros definitions go here */
 
 
 
 
 /* ==================================================================== */
-/* ==================== private function prototypes =================== */
+/* ==================== private function Declaration ================== */
 /* ==================================================================== */
 
 /* Private Functions Prototypes go here */
@@ -155,19 +155,19 @@ echo "/************************************************************************
 
 
 /* ==================================================================== */
-/* =================== Public functions definition ==================== */
+/* ================= Public functions Implementation ================== */
 /* ==================================================================== */
 
-/* Functions definitions public functions go here */
+/* Functions Implementation public functions go here */
 
 
 
 
 /* ==================================================================== */
-/* =============== private functions definition ======================= */
+/* ================ private functions Implementation ================== */
 /* ==================================================================== */
 
-/* Function Definitions for private (static) functions go here */
+/* Function Implementation for private (static) functions go here */
 
 
 
