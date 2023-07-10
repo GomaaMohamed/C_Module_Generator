@@ -1,5 +1,5 @@
 # C_Module_Generator
-Bash Script generates a well structured C Software Component 
+  Bash Script generates a well structured C Software Component 
 
 
 ## Getting Started
