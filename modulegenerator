@@ -40,7 +40,7 @@ echo "#ifndef ${modulename}_INTERFACE_H
 
 
 /* ==================================================================== */
-/* ==================== public function Declaration =================== */
+/* ==================== public functions Declaration ================== */
 /* ==================================================================== */
 
 /* Public Functions Declaration go here */
@@ -97,7 +97,7 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 /* ==================================================================== */
-/* ======================== private variables ========================= */
+/* =================== private variables and Macros =================== */
 /* ==================================================================== */
 
 /* private variables and Macros definitions go here */
@@ -106,7 +106,7 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 /* ==================================================================== */
-/* ==================== private function Declaration ================== */
+/* ==================== private functions Declaration ================= */
 /* ==================================================================== */
 
 /* Private Functions Prototypes go here */
