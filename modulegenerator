@@ -1,37 +1,39 @@
 #!/bin/bash
 #This Script generates C Modules
-read -p "Please enter the name of the Module Auther: " authername
+read -p "Enter the name of the Module Auther: " authername
 echo "
-Hello Mr: ${authername} 
+Hello ${authername} 
 Wellcome to the C Programming Language Module Generator
 "
-read -p "Please enter the name of the Module: " modulename
-read -p "Please enter the Version of the Module: " versionnumber
+read -p "Enter the name of the Module: " modulename
+read -p "Enter the Version of the Module: " versionnumber
 
 
 
-echo "#ifndef ${modulename}_INTERFACE_H
+echo "/******************************************************************************
+* @file:    ${modulename}_interface.h
+* @author:  Copyright (c) `date +%Y` ${authername}.
+* @license: GNU GPL version 3 or later.
+*	    This is free software: you are free to change and redistribute it.  
+*	    There is NO WARRANTY, to the extent permitted by law.
+* @version: V${versionnumber}   
+* @date:    `date -R`
+* @brief:   A description of the module’s purpose.
+*******************************************************************************/
+#ifndef ${modulename}_INTERFACE_H
 #define ${modulename}_INTERFACE_H
- 
-/************************************************************************
-* @file ${modulename}_interface.h
-* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
-* @version V${versionnumber}   
-* @date `date -R`
-* @brief A description of the module’s purpose.
-*************************************************************************/
 
 /* ==================================================================== */
-/* ======================= public data types ========================== */
+/* ======================= Public Data Types ========================== */
 /* ==================================================================== */
 
-/* Definition of public datatypes go here */
+/* Public datatypes go here */
 
 
 
 
 /* ==================================================================== */
-/* ======================== public Macros ============================= */
+/* ======================== Public Macros ============================= */
 /* ==================================================================== */
 
 /* Public Macro Definitions go here */
@@ -40,11 +42,23 @@ echo "#ifndef ${modulename}_INTERFACE_H
 
 
 /* ==================================================================== */
-/* ==================== public functions Declaration ================== */
+/* ==================== Public Functions Declaration ================== */
 /* ==================================================================== */
 
 /* Public Functions Declaration go here */
 
+/**
+ * @brief---------------------> 
+ * @param---------------------> None
+ * @parameter1----------------> () 
+ * @parameter2----------------> () 
+ * @parameter3----------------> () 
+ * @return--------------------> None
+ * @preconditions-------------> None
+ * @postconditions------------> None
+ * @synchronous/asynchronous--> Synchronous
+ * @reentrant/non-reentrant---> Reentrant               
+ */
 
 
 
@@ -52,16 +66,18 @@ echo "#ifndef ${modulename}_INTERFACE_H
 " 1> ${modulename}_interface.h
 
 
-echo "#ifndef ${modulename}_CONFIG_H
+echo "/******************************************************************************
+* @file:    ${modulename}_config.h
+* @author:  Copyright (c) `date +%Y` ${authername}.
+* @license: GNU GPL version 3 or later.
+*	    This is free software: you are free to change and redistribute it.  
+*	    There is NO WARRANTY, to the extent permitted by law.
+* @version: V${versionnumber}   
+* @date:    `date -R`
+* @brief:   A description of the module’s purpose.
+*******************************************************************************/
+#ifndef ${modulename}_CONFIG_H
 #define ${modulename}_CONFIG_H
- 
-/************************************************************************
-* @file ${modulename}_config.h
-* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
-* @version V${versionnumber}   
-* @date `date -R`
-* @brief A description of the module’s purpose.
-*************************************************************************/
 
 /* ==================================================================== */
 /* =================== Configurations Selection ======================= */
@@ -76,19 +92,21 @@ echo "#ifndef ${modulename}_CONFIG_H
 " 1> ${modulename}_config.h
 
 
-echo "#ifndef ${modulename}_PRIVATE_H
+echo "/******************************************************************************
+* @file:    ${modulename}_private.h
+* @author:  Copyright (c) `date +%Y` ${authername}.
+* @license: GNU GPL version 3 or later.
+*	    This is free software: you are free to change and redistribute it.  
+*	    There is NO WARRANTY, to the extent permitted by law.
+* @version: V${versionnumber}   
+* @date:    `date -R`
+* @brief:   A description of the module’s purpose.
+*******************************************************************************/
+#ifndef ${modulename}_PRIVATE_H
 #define ${modulename}_PRIVATE_H
- 
-/************************************************************************
-* @file ${modulename}_private.h
-* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
-* @version V${versionnumber}   
-* @date `date -R`
-* @brief A description of the module’s purpose.
-*************************************************************************/
 
 /* ==================================================================== */
-/* ====================== private data types ========================== */
+/* ====================== Private Data Types ========================== */
 /* ==================================================================== */
 
 /* Definition of private datatypes go here */
@@ -97,7 +115,7 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 /* ==================================================================== */
-/* =================== private variables and Macros =================== */
+/* =================== Private Variables and Macros =================== */
 /* ==================================================================== */
 
 /* private variables and Macros definitions go here */
@@ -106,7 +124,7 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 /* ==================================================================== */
-/* ==================== private functions Declaration ================= */
+/* ==================== Private Functions Declaration ================= */
 /* ==================================================================== */
 
 /* Private Functions Prototypes go here */
@@ -121,16 +139,19 @@ echo "#ifndef ${modulename}_PRIVATE_H
 
 
 
-echo "/************************************************************************
-* @file ${modulename}_program.c
-* @author Copyright (c) `date +%Y` ${authername}.  All rights reserved.
-* @version V${versionnumber}   
-* @date `date -R`
-* @brief A description of the module’s purpose.
-*************************************************************************/
+echo "/******************************************************************************
+* @file:    ${modulename}_program.c
+* @author:  Copyright (c) `date +%Y` ${authername}.
+* @license: GNU GPL version 3 or later.
+*	    This is free software: you are free to change and redistribute it.  
+*	    There is NO WARRANTY, to the extent permitted by law.
+* @version: V${versionnumber}   
+* @date:    `date -R`
+* @brief:   A description of the module’s purpose.
+*******************************************************************************/
 
 /* ==================================================================== */
-/* ========================== include files =========================== */
+/* ========================== Include Files =========================== */
 /* ==================================================================== */
 
 /* Inclusion of Standard Types and Bit Math header files goes here */
@@ -146,7 +167,7 @@ echo "/************************************************************************
 
 
 /* ==================================================================== */
-/* ======================== global variables ========================== */
+/* ======================== Global Variables ========================== */
 /* ==================================================================== */
 
 /* Global variables definitions go here */
@@ -155,7 +176,7 @@ echo "/************************************************************************
 
 
 /* ==================================================================== */
-/* ================= Public functions Implementation ================== */
+/* ================= Public Functions Implementation ================== */
 /* ==================================================================== */
 
 /* Functions Implementation public functions go here */
@@ -164,7 +185,7 @@ echo "/************************************************************************
 
 
 /* ==================================================================== */
-/* ================ private functions Implementation ================== */
+/* ================ Private Functions Implementation ================== */
 /* ==================================================================== */
 
 /* Function Implementation for private (static) functions go here */
