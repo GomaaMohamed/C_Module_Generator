@@ -20,8 +20,8 @@ echo "/*************************************************************************
 * @date:    `date -R`
 * @brief:   A description of the module’s purpose.
 *******************************************************************************/
-#ifndef ${modulename}_INTERFACE_H
-#define ${modulename}_INTERFACE_H
+#ifndef _${modulename}_INTERFACE_H
+#define _${modulename}_INTERFACE_H
 
 /* ==================================================================== */
 /* ======================= Public Data Types ========================== */
@@ -76,8 +76,8 @@ echo "/*************************************************************************
 * @date:    `date -R`
 * @brief:   A description of the module’s purpose.
 *******************************************************************************/
-#ifndef ${modulename}_CONFIG_H
-#define ${modulename}_CONFIG_H
+#ifndef _${modulename}_CONFIG_H
+#define _${modulename}_CONFIG_H
 
 /* ==================================================================== */
 /* =================== Configurations Selection ======================= */
@@ -102,8 +102,8 @@ echo "/*************************************************************************
 * @date:    `date -R`
 * @brief:   A description of the module’s purpose.
 *******************************************************************************/
-#ifndef ${modulename}_PRIVATE_H
-#define ${modulename}_PRIVATE_H
+#ifndef _${modulename}_PRIVATE_H
+#define _${modulename}_PRIVATE_H
 
 /* ==================================================================== */
 /* ====================== Private Data Types ========================== */
